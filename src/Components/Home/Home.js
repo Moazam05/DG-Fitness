@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import './Home.css';
+// import './Home.css';
+// import Header from '../Header.js'
+// import Footer from '../Footer.js'
+import {Link} from 'react-router-dom'
+import Hero from '../Hero.js'
 
 export class Home extends Component {
   render() {
@@ -22,103 +26,14 @@ export class Home extends Component {
           </div>
         </div>
         {/* Preloader End */}
-        {/* start header */}
-        <header className='d-flex align-items-center'>
-          <div className='container'>
-            <div className='row align-items-center'>
-              <div className='col-md-3 col-5 logo'>
-                {/*logo start*/}
-                <a href='index.html'>
-                  <img src='img/logo.svg' className='img-fluid' alt='' />
-                </a>
-                {/*logo end*/}
-              </div>
-              <div className='col-md-9 col-7'>
-                {/*menu start*/}
-                <div className='menu_area d-flex align-items-center justify-content-end'>
-                  <ul>
-                    <li>
-                      <a href='index.html' className='active'>
-                        EN
-                      </a>
-                    </li>
-                    <li>
-                      <a href='index-2.html'>ع</a>
-                    </li>
-                  </ul>
-                  <div className='button_wrapper d-none d-md-block'>
-                    {/* <a href='#' className='button'> */}
-                    <a href='/' className='button'>
-                      SIGN IN
-                    </a>
-                    {/* <a href='#' className='button btn2'> */}
-                    <a href='/' className='button btn2'>
-                      SIGN UP
-                    </a>
-                  </div>
-                  <div className='social_icons'>
-                    {/* <a
-                      href='https://www.facebook.com/dgfitnessandlifestyle/'
-                      target='_blank'
-                    > */}
-                    <a href='/' target='_blank'>
-                      <img src='img/facebook.svg' alt='' />
-                    </a>
-                    {/* <a
-                      href='https://www.instagram.com/dg_fitnessandlifestyle/'
-                      target='_blank'
-                    > */}
-                    <a href='/' target='_blank'>
-                      <img src='img/instagram.svg' alt='' />
-                    </a>
-                    {/* <a
-                      href='https://wa.me/971569677986'
-                      target='_blank'
-                      data-bs-toggle='tooltip'
-                      data-bs-placement='bottom'
-                      title={+971569677986}
-                    > */}
-                    <a
-                      href='/'
-                      target='_blank'
-                      data-bs-toggle='tooltip'
-                      data-bs-placement='bottom'
-                      title={+971569677986}
-                    >
-                      <img src='img/whatsapp.svg' alt='' />
-                    </a>
-                  </div>
-                </div>
-                {/* menu toggler */}
-                <div className='hamburger-menu'>
-                  <span className='line-top' />
-                  <span className='line-center' />
-                  <span className='line-bottom' />
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
-        {/* end header */}
-        {/* banner area */}
-        <div
-          className='banner_area d-flex align-items-center'
-          style={{ backgroundImage: 'url(img/banner.jpg)' }}
-        >
-          <div className='container'>
-            <div className='row'>
-              <div className='col-12 text-center'>
-                <h1>
-                  Build <span>Your</span> Body
-                </h1>
-                <a href='/' className='button'>
-                  {/* <a href='#' className='button'> */}
-                  START NOW!
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        
+
+        {/* <Header /> */}
+
+        
+        <Hero />
+
+
         {/* video area */}
         <div
           className='container text-center pt_100 mb_60 position-relative'
@@ -163,6 +78,10 @@ export class Home extends Component {
             <div className='row'>
               <div className='col-12 text-center'>
                 <h2 className='title'>
+                  See our Amazing <Link to="/blogs">Blogs</Link> to change your {' '}
+                  <span className='theme_text'>LIFESTYLE</span>
+                </h2>
+                <h2 className='title' style={{marginTop:"40px"}}>
                   PROGRAMS to suit your{' '}
                   <span className='theme_text'>LIFESTYLE</span>
                 </h2>
@@ -357,125 +276,9 @@ export class Home extends Component {
             </div>
           </div>
         </div>
-        {/* footer area */}
-        <footer>
-          <div className='container'>
-            <div className='row gx-lg-5 justify-content-between'>
-              <div className='col-lg-5 mt_30'>
-                <form action='#'>
-                  <h4>Contact Us</h4>
-                  <div className='row'>
-                    <div className='col-sm-6 mt_25'>
-                      <input
-                        type='text'
-                        className='input_box'
-                        placeholder='Name'
-                      />
-                    </div>
-                    <div className='col-sm-6 mt_25'>
-                      <input
-                        type='email'
-                        className='input_box'
-                        placeholder='Email'
-                      />
-                    </div>
-                    <div className='col-12 mt_25'>
-                      <textarea
-                        className='input_box'
-                        placeholder='Leave your message'
-                        defaultValue={''}
-                      />
-                    </div>
-                    <div className='col-12 mt_25'>
-                      <button type='submit' className='button'>
-                        Submit
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <div className='col-lg-3 mt_30'>
-                <a href='index.html' className='logo'>
-                  <img src='img/flogo.svg' className='img-fluid' alt='' />
-                </a>
-                <ul>
-                  <li>
-                    <a href='/'>About Us</a>
-                  </li>
-                  <li>
-                    <a href='/'>Inspiration</a>
-                  </li>
-                  <li>
-                    <a href='/'>Education</a>
-                  </li>
-                </ul>
-                <div className='social_icons mt_20'>
-                  {/* <a
-                    href='https://www.facebook.com/dgfitnessandlifestyle/'
-                    target='_blank'
-                  > */}
-                  <a href='/' target='_blank'>
-                    <img src='img/facebbookw.svg' alt='' />
-                  </a>
-                  {/* <a
-                    href='https://www.instagram.com/dg_fitnessandlifestyle/'
-                    target='_blank'
-                  > */}
-                  <a href='/' target='_blank'>
-                    <img src='img/instagram2.svg' alt='' />
-                  </a>
-                  {/* <a href="https://wa.me/971569677986"  target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title={+971569677986}> */}
-                  <a
-                    href='/'
-                    target='_blank'
-                    data-bs-toggle='tooltip'
-                    data-bs-placement='bottom'
-                    title={+971569677986}
-                  >
-                    <img src='img/whatsappw.svg' alt='' />
-                  </a>
-                </div>
-              </div>
-              <div className='col-lg-3 mt_30'>
-                <h4>Corporate Office</h4>
-                <ul className='mt_35'>
-                  <li>
-                    <i className='fal fa-paper-plane' /> 44 New Design Street,
-                    rne 005
-                  </li>
-                  <li>
-                    <i className='fal fa-phone' />{' '}
-                    <a href='tel:971569677986'>+971 56 967 7986</a>
-                  </li>
-                  <li>
-                    <i className='fal fa-envelope' />{' '}
-                    <a
-                      className='text-truncate'
-                      href='mailto:denis@dgfitness.guru'
-                    >
-                      denis@dgfitness.guru
-                    </a>
-                  </li>
-                  <li>
-                    <i className='far fa-globe' />{' '}
-                    <a
-                      href='dgfitnessandlifestyle.com'
-                      className='text-truncate'
-                    >
-                      dgfitnessandlifestyle.com
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className='col-12 text-center copy_text'>
-                <a href='/'>Terms and Conditions</a>
-                <span>|</span>
-                <a href='/'>Privacy Policy</a>
-                <p>© 2021 Denis Golosin All Rights Reserved</p>
-              </div>
-            </div>
-          </div>
-        </footer>
+
+        {/* <Footer /> */}
+
       </>
     );
   }
